@@ -1,0 +1,27 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("temanku semua pada jahat tante", 0.1),
+        ("aku lagi susah mereka gak ada", 0.1),
+        ("coba kalau lagi jayaaa", 0.1),
+        ("aku di puja puja tante", 0.1),
+        ("sudah terbiasa terjadi tante", 0.1),
+        ("teman datang ketika lagi butuh saja", 0.1),
+        ("coba kalau lagi susaahh", 0.1),
+        ("mereka semua menghilaaaaangggg", 0.1)
+    ]
+
+    delay = [1.5, 1.4, 1.9, 1.6, 2.15, 1.8, 1.1, 1.5]
+    print("\n~TANTEEE~\n")
+    time.sleep(3)
+
+    for i, (teks, delay_char) in enumerate(lirik):
+        for char in teks:
+            print(char, end="", flush=True)
+            time.sleep(delay_char)
+        print()  # ganti baris setelah satu lirik selesai
+        time.sleep(delay[i])
+
+jalanin_lirik()
